@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CureSysc</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!--~~~~~~~~~~~~~~ SIDEBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+        <div class="sidepanel">
+
+            <h1 class="logo">✚ CureSync</h1>
+
+            <a href="#" class="nav-items">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="patient.html" class="nav-items">
+                <i class="fa-solid fa-users"></i>
+                <span>Patient</span>
+            </a>
+
+            <a href="doctor.html" class="nav-items">
+                <i class="fa-solid fa-stethoscope"></i>
+                <span>Doctor</span>
+            </a>
+
+            <a href="#" class="nav-items">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Appointments</span>
+            </a>
+
+            <a href="#" class="nav-items">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </div>
+
+
+        <!-- ~~~~~~~~~~~~~ PAGE ~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <div class="page">
+
+
+            <!--~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+            <div class="header">
+
+                <div class="panel">
+
+                    <input placeholder="Search" class="search">
+
+                    <i class="fa-solid fa-bell notification"
+                        id="notification"></i>
+
+                    <i class="fa-regular fa-envelope notification"
+                        id="Message"></i>
+
+                    <div class="profile">
+
+                        <img src="admin.webp"
+                            id="Admin"
+                            width="50"
+                            height="50">
+
+                        <div id="admin">
+
+                            <strong>Admin</strong>
+
+                            <small>Super Admin</small>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~ DASHBOARD HEADING ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <div class="dashboard-heading">
+
+                <div>
+
+                    <strong>Dashboard</strong>
+
+                    <small id="Adminname">
+                        Welcome, Admin!
+                    </small>
+
+                </div>
+
+
+                <div class="calendar">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <div>
+
+                        <small id="currentDate">
+                            10 Aug 2026
+                        </small>
+
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div id="calendarPopup"></div>
+                </div>
+
+            </div>
+
+
+            <!--~~~~~~~~~~~~~~~~ DATA CARDS ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+            <div class="Data">
+
+                <div class="box">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <div>
+
+                        <span>Total Appointments</span>
+
+                        <strong id="totalAppointments">
+                            128
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="box">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <div>
+
+                        <span>Total Patients</span>
+
+                        <strong id="totalPatients">
+                            540
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="box">
+
+                    <i class="fa-solid fa-stethoscope"></i>
+
+                    <div>
+
+                        <span>Total Doctors</span>
+
+                        <strong id="totaldoctors">
+                            45
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ~~~~~~~~~~~~~~~~~ DASHBOARD BLOCKS ~~~~~~~~~~~~~~~~ -->
+
+            <div class="Block">
+
+
+                <!-- ~~~~~~~~~~~~~~~~ ROW 1 ~~~~~~~~~~~~~~~~~~~ -->
+
+                <div class="ROW1">
+
+
+                    <!-- TODAY'S APPOINTMENTS -->
+
+                    <div class="Todayappointment">
+
+                        <div class="box-title">
+
+                            <div>
+
+                                <h3>
+                                    Today's Appointments
+                                </h3>
+
+                                <small>
+                                    Upcoming schedule
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                        </div>
+
+
+                        <!-- APPOINTMENT LIST -->
+
+                        <div id="appointmentList"></div>
+
+
+                        <!-- BOOK APPOINTMENT BUTTON -->
+
+                        <button class="view-btn"
+                            id="bookAppointment">
+
+                            Book Appointment
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+
+                        <!-- VIEW SCHEDULE BUTTON -->
+
+                        <button class="view-btn"
+                            id="viewSchedule">
+
+                            View Schedule
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- PATIENT QUEUE -->
+
+                    <div class="PatientNum">
+
+                        <div class="box-title">
+
+                            <div>
+
+                                <h3>
+                                    Patient Queue / Current Token
+                                </h3>
+
+                                <small>
+                                    Live queue status
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-ticket"></i>
+
+                        </div>
+
+
+                        <div class="token-section">
+
+                            <div class="current-token">
+
+                                <small>
+                                    Current Token
+                                </small>
+
+                                <strong>
+                                    A-024
+                                </strong>
+
+                            </div>
+
+
+                            <div class="next-token">
+
+                                <small>
+                                    Next Token
+                                </small>
+
+                                <strong>
+                                    A-025
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="queue-status">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Queue is running normally
+                            </span>
+
+                        </div>
+
+
+                        <button class="view-btn">
+
+                            Manage Queue
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ~~~~~~~~~~~~~~~~~~ ROW 2 ~~~~~~~~~~~~~~~~~~~~~-->
+
+                <div class="Row2">
+
+
+                    <!-- DOCTOR AVAILABILITY -->
+
+                    <div class="doctor">
+
+                        <div class="box-title">
+
+                            <div>
+
+                                <h3>
+                                    Doctor Availability
+                                </h3>
+
+                                <small>
+                                    Doctors available today
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-user-doctor"></i>
+
+                        </div>
+
+
+                        <div id="doctorList"></div>
+
+
+                        <button class="view-btn" id="doctorDirectory">
+
+                            Doctor Directory
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- AI ASSISTANT -->
+
+                    <div class="Ai">
+
+                        <div class="box-title">
+
+                            <div>
+
+                                <h3>
+                                    AI Assistant
+                                </h3>
+
+                                <small>
+                                    Smart hospital assistance
+                                </small>
+
+                            </div>
+
+                            <i class="fa-solid fa-robot"></i>
+
+                        </div>
+
+
+                        <div class="ai-message">
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                            <div>
+
+                                <strong>
+                                    How can I help?
+                                </strong>
+
+                                <p>
+                                    Generate reports, find information,
+                                    or get insights from hospital data.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="ai-actions">
+
+                            <button>
+                                Generate Report
+                            </button>
+
+                            <button>
+                                View Insights
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+    <!-- BOOK APPOINTMENT MODAL -->
+
+    <div class="appointment-overlay"
+        id="appointmentModal">
+
+        <div class="appointment-box">
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button class="close-btn"
+                id="closeAppointment">
+
+                &times;
+
+            </button>
+
+
+            <!-- HEADER -->
+
+            <div class="login-header">
+
+                <div class="login-icon">
+
+                    <i class="fa-solid fa-calendar-plus"></i>
+
+                </div>
+
+                <h2>
+                    Book Appointment
+                </h2>
+
+                <p>
+                    Enter patient and appointment details
+                </p>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form id="appointmentForm">
+
+
+                <!-- PATIENT NAME -->
+
+                <div class="input-group">
+
+                    <label for="patientName">
+                        Patient Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="patientName"
+                        placeholder="Enter patient name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- AGE -->
+
+                <div class="input-group">
+
+                    <label for="patientAge">
+                        Age
+                    </label>
+
+                    <input
+                        type="number"
+                        id="patientAge"
+                        placeholder="Enter patient age"
+                        min="1"
+                        max="120"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- APPOINTMENT TIME -->
+
+                <div class="input-group">
+
+                    <label for="appointmentTime">
+                        Appointment Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="appointmentTime"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DOCTOR -->
+
+                <div class="input-group">
+
+                    <label for="appointmentDoctor">
+                        Doctor
+                    </label>
+
+                    <select
+                        id="appointmentDoctor"
+                        required
+                    >
+
+                        <option value=""
+                            disabled
+                            selected>
+
+                            Select doctor
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ERROR -->
+
+                <p class="appointment-error"
+                    id="appointmentError">
+                </p>
+
+
+                <!-- BOOK BUTTON -->
+
+                <button
+                    type="submit"
+                    class="login-btn">
+
+                    Book Appointment
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- ADMIN LOGIN MODAL -->
+    <!-- ================================================= -->
+
+    <div class="login-overlay"
+        id="adminLogin">
+
+        <div class="login-box">
+
+            <button class="close-btn"
+                id="closeLogin">
+
+                &times;
+
+            </button>
+
+
+            <div class="login-header">
+
+                <div class="login-icon">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+                <h2>
+                    Admin Login
+                </h2>
+
+                <p>
+                    Login to access the hospital management system
+                </p>
+
+            </div>
+
+
+            <form id="adminLoginForm">
+
+
+                <div class="input-group">
+
+                    <label for="adminUsername">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="adminUsername"
+                        placeholder="Enter your username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="adminRole">
+                        Role
+                    </label>
+
+                    <select id="adminRole"
+                        required>
+
+                        <option value=""
+                            disabled
+                            selected>
+
+                            Select your role
+
+                        </option>
+
+                        <option value="patient">
+                            Patient
+                        </option>
+
+                        <option value="doctor">
+                            Doctor
+                        </option>
+
+                        <option value="admin">
+                            Admin
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="adminPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <p class="login-error"
+                    id="loginError">
+                </p>
+
+
+                <button type="submit"
+                    class="login-btn">
+
+                    Login
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+    <script src="user.js"></script>
+  
+</body>
+
+</html>

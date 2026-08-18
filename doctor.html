@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Page</title>
+    <link rel="stylesheet" href="doctor.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+            <!--~~~~~~~~~~~~~~ SIDEBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+        <div class="sidepanel">
+
+            <h1 class="logo">✚ CureSync</h1>
+
+            <a href="index.html" class="nav-items">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="patient.html" class="nav-items">
+                <i class="fa-solid fa-users"></i>
+                <span>Patient</span>
+            </a>
+
+            <a href="doctor.html" class="nav-items">
+                <i class="fa-solid fa-stethoscope"></i>
+                <span>Doctor</span>
+                
+            </a>
+
+            <a href="#" class="nav-items">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Appointments</span>
+            </a>
+
+            <a href="#" class="nav-items">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </div>
+        <div class="panel">
+                <div class="greeting">
+                    <h3>Hello! Dr. Ananya Sharma</h3>
+                    <i class="fa-solid fa-bell notification"
+                                id="notification"></i>
+
+                            <i class="fa-regular fa-envelope notification"
+                                id="Message"></i>
+
+                            <div class="profile">
+
+                                <img src="admin.webp"
+                                    id="Admin"
+                                    width="50"
+                                    height="50">
+
+                                <div id="admin">
+
+                                    <strong>Admin</strong>
+
+                                    <small>Super Admin</small>
+
+                                </div>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </div>
+
+                </div>
+        </div>
+        
+        <!-- Boxesssss -->
+         <div class="quick-action">
+            <a href="#" class="action-card">
+                <i class="fa-regular fa-calendar-check"></i>
+                <h2>12</h2>
+            <div>
+                
+                <strong>Total Appointments</strong>
+                <small>Today</small>
+                
+            </div>
+                <span>→</span>
+            </a>
+            <a href="#" class="action-card">
+                <i class="fa-solid fa-user-group"></i>
+                <h2>8</h2>
+                <div>
+                    <strong>Patients Seen</strong>
+                    <small>Today </small>
+                </div>
+                    <span>→</span>
+            </a>
+            <a href="#" class="action-card">
+                <i class="fa-solid fa-stethoscope"></i>
+                <h2>1</h2>
+            <div>
+                <strong>In Consultation</strong>
+                <small>Now</small>
+            </div>
+                <span>→</span>
+            </a>
+
+            <a href="#" class="action-card">
+               <i class="fa-regular fa-circle-check"></i>
+                <h2>5</h2>
+            <div>
+                <strong>Completed</strong>
+                <small>Today</small>
+            </div>
+                <span>→</span>
+            </a>
+         </div>
+<div class="dashboard-lower">
+    <!--Current appointment -->
+  
+
+<div class="current-appointment">
+
+    <h4>Current Appointment</h4>
+
+    <div class="appointment-content">
+
+        <!-- Patient Information -->
+        <div class="patient-info">
+
+            
+
+            <div class="patient-details">
+
+                <strong>Rohan Verma</strong>
+
+                <span>30 Years, Male</span>
+
+                <span>Skin Allergy</span>
+
+                <div class="appointment-time">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>10:00 AM</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="appointment-actions">
+
+            <button class="completed-btn">
+                <i class="fa-solid fa-check"></i>
+                Completed
+            </button>
+
+            <button class="next-patient-btn" id="NextPatient">
+                <i class="fa-solid fa-arrow-right"></i>
+                Next Patient
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+    <!-- ================= ALL APPOINTMENTS ================= -->
+
+    <div class="appointments-section">
+
+        <div class="section-heading">
+            <h3>All Appointments</h3>
+
+            <button class="date-selector">
+                <i class="fa-regular fa-calendar"></i>
+                <span>13 Aug 2026</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+        </div>
+
+
+        <div class="appointments-table">
+
+            <div class="table-header">
+                <span>Time</span>
+                <span>Patient Name</span>
+                <span>Purpose</span>
+                <span>Status</span>
+                <span>Action</span>
+            </div>
+
+
+            <div class="appointment-row">
+
+                <span>09:00 AM</span>
+
+                <div class="patient-name">
+                    <div class="patient-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span>Sunanya R.</span>
+                </div>
+
+                <span>Regular Checkup</span>
+
+                <span class="status completed">
+                    Completed
+                </span>
+
+                <button class="view-btn">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="appointment-row">
+
+                <span class="current-time">10:00 AM</span>
+
+                <div class="patient-name">
+                    <div class="patient-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span>Rohan Verma</span>
+                </div>
+
+                <span>Skin Allergy</span>
+
+                <span class="status consultation">
+                    In Consultation
+                </span>
+
+                <button class="view-btn">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="appointment-row">
+
+                <span>11:00 AM</span>
+
+                <div class="patient-name">
+                    <div class="patient-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span>Meera Iyer</span>
+                </div>
+
+                <span>Follow-up</span>
+
+                <span class="status waiting">
+                    Waiting
+                </span>
+
+                <button class="view-btn">
+                    Start Consultation
+                </button>
+
+            </div>
+
+
+            <div class="appointment-row">
+
+                <span>12:00 PM</span>
+
+                <div class="patient-name">
+                    <div class="patient-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span>Arun Kumar</span>
+                </div>
+
+                <span>BP &amp; Sugar Check</span>
+
+                <span class="status scheduled">
+                    Scheduled
+                </span>
+
+                <button class="view-btn">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="appointment-row">
+
+                <span>01:00 PM</span>
+
+                <div class="patient-name">
+                    <div class="patient-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span>Neha Singh</span>
+                </div>
+
+                <span>Headache</span>
+
+                <span class="status scheduled">
+                    Scheduled
+                </span>
+
+                <button class="view-btn">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="full-schedule">
+                <a href="#">View Full Schedule</a>
+            </div>
+
+        </div>
+        <div id="doctorAppointmentList"></div>
+    </div>
+
+
+    <!-- ================= DOCTOR INFORMATION ================= -->
+
+    <div class="doctor-info">
+
+        <h3>Doctor Information</h3>
+
+        <div class="doctor-tabs">
+
+            <button class="tab active">
+                Qualifications
+            </button>
+
+            <button class="tab">
+                Experience
+            </button>
+
+        </div>
+
+
+        <div class="qualification-list">
+
+            <div class="qualification">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <div>
+                    <strong>MBBS</strong>
+
+                    <small>
+                        All India Institute of Medical Sciences (AIIMS), New Delhi
+                    </small>
+
+                    <small>2010 – 2015</small>
+                </div>
+
+            </div>
+
+
+            <div class="qualification">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <div>
+                    <strong>MD (Cardiology)</strong>
+
+                    <small>
+                        PGIMER, Chandigarh
+                    </small>
+
+                    <small>2015 – 2018</small>
+                </div>
+
+            </div>
+
+
+            <div class="qualification">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <div>
+                    <strong>DM (Cardiology)</strong>
+
+                    <small>
+                        AIIMS, New Delhi
+                    </small>
+
+                    <small>2018 – 2021</small>
+                </div>
+
+            </div>
+
+
+            <div class="qualification">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <div>
+                    <strong>Fellowship in Interventional Cardiology</strong>
+
+                    <small>
+                        Apollo Hospitals, Chennai
+                    </small>
+
+                    <small>2021 – 2022</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Certifications -->
+
+        <div class="certifications">
+
+            <strong>Certifications</strong>
+
+            <div>
+                <i class="fa-regular fa-circle-check"></i>
+                <span>
+                    Advanced Cardiac Life Support (ACLS)
+                </span>
+            </div>
+
+            <div>
+                <i class="fa-regular fa-circle-check"></i>
+                <span>
+                    European Society of Cardiology (ESC) Certification
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="user.js"></script>
+<script src="doctor.js"></script>
+</body>
+</html>

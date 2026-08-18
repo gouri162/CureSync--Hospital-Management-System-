@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Page</title>
+    <link rel="stylesheet" href="patient.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+            <!--~~~~~~~~~~~~~~ SIDEBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+        <div class="sidepanel">
+
+            <h1 class="logo">✚ CureSync</h1>
+
+            <a href="index.html" class="nav-items">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="patient.html" class="nav-items">
+                <i class="fa-solid fa-users"></i>
+                <span>Patient</span>
+            </a>
+
+            <a href="doctor.html" class="nav-items">
+                <i class="fa-solid fa-stethoscope"></i>
+                <span>Doctor</span>
+                
+            </a>
+
+            <a href="#" class="nav-items">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Appointments</span>
+            </a>
+
+            <a href="#" class="nav-items">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </div>
+        <div class="panel">
+                <div class="greeting">
+                    <h3>Hello! Admin</h3>
+                    <i class="fa-solid fa-bell notification"
+                                id="notification"></i>
+
+                            <i class="fa-regular fa-envelope notification"
+                                id="Message"></i>
+
+                            <div class="profile">
+
+                                <img src="admin.webp"
+                                    id="Admin"
+                                    width="50"
+                                    height="50">
+
+                                <div id="admin">
+
+                                    <strong>Admin</strong>
+
+                                    <small>Super Admin</small>
+
+                                </div>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </div>
+
+                </div>
+        </div>
+        <!-- Appointments~~~~~~~~~~~~~~~~~~~~~ -->
+        <div class="appointment">
+            <div class="progressbar">
+
+                <h3>Appointment Progress</h3>
+
+                <div class="step upcoming"id="AppBooked">
+                    <i class="fa-regular fa-calendar-check" ></i>
+                    <strong>1. Appointment<br>Booked</strong>
+                    <small>Upcoming</small>
+                </div>
+
+                <div class="step upcoming" id="InConsultation">
+                    <i class="fa-solid fa-user"></i>
+                    <strong>2. In <br>Consultation</strong>
+                    <small>Upcoming</small>
+                </div>
+
+                
+
+                <div class="step upcoming">
+                    <i class="fa-regular fa-clipboard"></i>
+                    <strong>4. Consultation<br>Completed</strong>
+                    <small>Upcoming</small>
+                </div>
+
+                
+
+            </div>
+        </div>
+        <!-- Boxesssss -->
+         <div class="quick-action">
+            <a href="#" class="action-card" id="bookAppointment">
+                <i class="fa-regular fa-calendar-check"></i>
+            <div>
+                <strong>Book Appointment</strong>
+                <p>Schedule your next appointment</p>
+            </div>
+                <span>→</span>
+            </a>
+            <a href="#" class="action-card">
+                <i class="fa-solid fa-file-prescription"></i>
+                <div>
+                    <strong>My prescription</strong>
+                    <small>View your prescription! </small>
+                </div>
+                    <span>→</span>
+            </a>
+            <a href="#" class="action-card">
+                <i class="fa-solid fa-flask"></i>
+            <div>
+                <strong>Test Reports</strong>
+                <p>View your lab test reports</p>
+            </div>
+                <span>→</span>
+            </a>
+
+            <a href="#" class="action-card">
+                <i class="fa-solid fa-comments"></i>
+            <div>
+                <strong>Messages</strong>
+                <p>Send message to your doctor</p>
+            </div>
+                <span>→</span>
+            </a>
+         </div>
+         <!-- upcomming appointment -->
+          <div class="Schedule">
+            <strong>Dr. Ananya Sharma </strong>
+            <i class="fa-solid fa-calendar-day"></i>
+            <small>14,August 2026</small>
+            <i class="fa-regular fa-clock"></i>
+            <small>11:00</small>
+            <button>View Schedule</button>
+            
+          </div>
+          <div class="patientdown">
+            <div class="oldprescript">
+            <strong>Recent Prescriptions</strong>
+            
+            </div>
+    <div class="medicalhistory">
+                <strong>Medical Records</strong>
+                <div class="medical-row">
+            <i class="fa-solid fa-notes-medical"></i>
+            <strong>Allergies</strong>
+            <small>No known allergies</small>
+        </div>
+
+        <div class="medical-row">
+            <i class="fa-solid fa-droplet"></i>
+            <strong>Blood Group</strong>
+            <small>O+</small>
+        </div>
+
+        <div class="medical-row">
+            <i class="fa-solid fa-ruler-vertical"></i>
+            <strong>Height</strong>
+            <small>165 cm</small>
+        </div>
+
+        <div class="medical-row">
+            <i class="fa-solid fa-weight-scale"></i>
+            <strong>Weight</strong>
+            <small>58 kg</small>
+        </div>
+    </div>
+</div>
+<!-- Appointmenttttt -->
+<div class="appointment-modal" id="appointmentModal">
+
+    <div class="appointment-box">
+
+        <button type="button" class="close-btn" id="closeAppointment">&times;</button>
+
+        <h2>Book Appointment</h2>
+
+        <form id="appointmentForm">
+
+            <input type="text" id="patientName" placeholder="Patient Name">
+            <input type="number" id="patientAge" placeholder="Age">
+
+            <select id="appointmentDoctor">
+                <option value="">Select Doctor</option>
+            </select>
+
+            <input type="time" id="appointmentTime">
+
+            <p id="appointmentError"></p>
+
+            <button type="submit" class="book-btn">
+                Book Appointment
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="user.js"></script>
+<script src ="patient.js"></script>
+<!-- <script src="app.js"></script> -->
+</body>
+</html>
